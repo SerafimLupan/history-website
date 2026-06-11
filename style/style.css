@@ -1,34 +1,290 @@
-/* ИМПОРТ ТАИЛВИНД v4 (Importul de baza al framework-ului) */
-@import "tailwindcss";
+/* style/style.css */
 
-/* ТЕМЕ ШИ ВАРИАБИЛЕ КУСТОМ (Personalizari direct în CSS) */
-@theme {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+/* VARIABILE CUSTOM SI FONTURI */
+:root {
+    --bg-color: #0a0a0a;       /* Gri extrem de inchis pentru fundal */
+    --card-bg: #141414;        /* Gri putin mai deschis pentru carduri */
+    --card-border: #222222;    /* Marginea discreta a cardurilor */
+    --accent-color: #f59e0b;   /* Chihlimbar / Amber pentru elementele active */
+    --text-main: #f3f4f6;      /* Alb mat pentru textul principal */
+    --text-muted: #9ca3af;     /* Gri pentru descrieri */
+    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* СТИЛУРЬ ДЖЕНЕРАЛЕ ШИ КОРЕКЦУРЬ (Ajustari pentru timeline si efecte) */
-@layer base {
-  html {
+/* STILURI GENERALE (Reset) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
-  }
-  
-  /* Stil pentru bara de derulare (scrollbar) adaptata la tema dark */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #0a0a0a; 
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #262626; 
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #d97706; 
-  }
+    font-family: var(--font-stack);
+    background-color: var(--bg-color);
+    color: var(--text-main);
 }
 
-/* АНИМАЦИЙ КУСТОМ (Dacă vrei efecte speciale la hover sau scroll) */
-.timeline-card-shadow {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+body {
+    antialiased: true;
+    padding-top: 4rem; /* Spatiu pentru meniul fix */
+}
+
+/* НАВИГАЦИЯ (Meniu) */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+    z-index: 100;
+}
+
+.nav-container {
+    max-w: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-color);
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* ЕКРАН ПРИНЧИПАЛ (Hero) */
+header {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.badge {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--accent-color);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #fde68a, var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-w: 600px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn-explore {
+    background-color: var(--accent-color);
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.2);
+}
+
+.btn-explore:hover {
+    background-color: #fbbf24;
+    transform: translateY(-1px);
+}
+
+/* СЕКЦИУНЯ КРОНОЛОДЖИЕ (Timeline) */
+.timeline-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.timeline-container {
+    position: relative;
+}
+
+/* Linia verticala de fundal (doar pe desktop, peste 768px) */
+@media (min-width: 768px) {
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background-color: #1f2937;
+        transform: translateX(-50%);
+    }
+}
+
+/* Un singur rand din timeline */
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* Cardurile impare merg pe stanga, cele pare pe dreapta */
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: auto;
+        text-align: right;
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: auto;
+    }
+}
+
+/* Bulina de pe axa */
+.timeline-dot {
+    position: absolute;
+    left: -11px;
+    top: 24px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 3px solid #374151;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    border-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Prima bulina o lasam aprinsa implicit ca punct de pornire */
+.timeline-item:first-child .timeline-dot {
+    border-color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+    .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-item:hover .timeline-dot {
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+/* БЛОКУРИЛЕ/КАРДУРИЛЕ (Cards) */
+.timeline-content {
+    width: 100%;
+    padding-left: 2rem; /* Spatiu pentru bulina pe mobil */
+}
+
+@media (min-width: 768px) {
+    .timeline-content {
+        width: 45%;
+        padding-left: 0;
+    }
+}
+
+.card {
+    display: block;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    border-color: rgba(245, 158, 11, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-tag {
+    color: var(--accent-color);
+}
+
+.card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0.3rem 0 0.75rem 0;
+    transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+    color: #fff;
+}
+
+.card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ФУТЕР (Footer) */
+footer {
+    border-top: 1px solid var(--card-border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #4b5563;
 }

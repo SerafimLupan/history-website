@@ -1,150 +1,107 @@
 <!DOCTYPE html>
-<html lang="ro" class="scroll-smooth">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Istoria Basarabiei | De la 1812 până în Prezent</title>
+    <title>Istoria Basarabiei | 1812 - Prezent</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-amber-500 selection:text-neutral-950">
+<body>
 
-    <nav class="fixed top-0 left-0 w-full bg-neutral-900/80 backdrop-blur-md border-b border-neutral-800 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <span class="text-xl font-bold tracking-wider text-amber-500 uppercase">Basarabia</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-neutral-300">
-                <a href="#acasa" class="hover:text-amber-500 transition-colors">Acasă</a>
-                <a href="#cronologie" class="hover:text-amber-500 transition-colors">Cronologie</a>
-                <a href="#despre" class="hover:text-amber-500 transition-colors">Despre Proiect</a>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Basarabia</div>
+            <div class="nav-links">
+                <a href="#acasa">Acasă</a>
+                <a href="#cronologie">Cronologie</a>
             </div>
         </div>
     </nav>
 
-    <header id="acasa" class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-neutral-950 to-neutral-950">
-        <div class="absolute inset-0 bg-[url('../assets/imagini/harti/background-pattern.png')] opacity-5 pointer-events-none"></div>
-        
-        <div class="relative max-w-4xl mx-auto text-center px-4 z-10">
-            <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6 animate-pulse">
-                Proiect Istoric • 1812 - 2026
-            </span>
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-amber-200 to-amber-500 mb-6">
-                Destinul Basarabiei
-            </h1>
-            <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                O incursiune cronologică prin istoria zbuciumată a teritoriului dintre Prut și Nistru, de la anexarea țaristă până la realitățile geopolitice contemporane.
-            </p>
-            <a href="#cronologie" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-neutral-950 bg-amber-500 hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-950 focus:ring-amber-500 transition-all shadow-lg shadow-amber-500/10">
-                Explorează Cronologia
-            </a>
-        </div>
+    <header id="acasa">
+        <div class="badge">Proiect Istoric • 1812 - 2026</div>
+        <h1>Destinul Basarabiei</h1>
+        <p>O incursiune cronologică prin istoria zbuciumată a teritoriului dintre Prut și Nistru, de la anexarea țaristă până la realitățile geopolitice contemporane.</p>
+        <a href="#cronologie" class="btn-explore">Explorează Cronologia</a>
     </header>
 
-    <main id="cronologie" class="py-24 bg-neutral-950 relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-4xl font-bold text-neutral-100">Etapele Istorice Macre</h2>
-                <p class="mt-4 text-neutral-400">Selectează o perioadă pentru a analiza în detaliu evenimentele, hărțile și documentele epocii.</p>
+    <main class="timeline-section" id="cronologie">
+        <h2 class="section-title">Etapele Istorice Macre</h2>
+
+        <div class="timeline-container">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <a href="pages/1812.html" class="card">
+                        <span class="card-tag">Punctul de Cotitură</span>
+                        <h3>Anul 1812</h3>
+                        <p>Tratatul de la București și ruperea teritoriului dintre Prut și Nistru din trupul Principatului Moldovei de către Imperiul Rus.</p>
+                    </a>
+                </div>
             </div>
 
-            <div class="relative border-l border-neutral-800 md:border-l-0 md:before:absolute md:before:top-0 md:before:bottom-0 md:before:left-1/2 md:before:w-[1px] md:before:bg-neutral-800">
-                
-                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between group">
-                    <div class="absolute -left-[17px] md:left-1/2 md:-ml-4 top-1.5 bg-neutral-950 border-2 border-amber-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
-                        <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
-                    </div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:text-right md:ml-auto md:order-1 hidden md:block"></div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:mr-auto md:order-2">
-                        <a href="pages/1812.html" class="block p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 hover:bg-neutral-900/60 transition-all duration-300">
-                            <span class="text-xs font-semibold text-amber-500 uppercase tracking-widest">Punctul de Cotitură</span>
-                            <h3 class="text-2xl font-bold text-neutral-100 mt-1 mb-3 group-hover:text-amber-400 transition-colors">Anul 1812</h3>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Tratatul de la București și ruperea teritoriului dintre Prut și Nistru din trupul Principatului Moldovei de către Imperiul Rus.</p>
-                        </a>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <a href="pages/1812-1918.html" class="card">
+                        <span class="card-tag">Regimul Țarist</span>
+                        <h3>1812 - 1918</h3>
+                        <p>Secolul de dominație rusă, transformarea în gubernie, politicile de rusificare forțată și apariția mișcărilor de emancipare națională.</p>
+                    </a>
                 </div>
-
-                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between group">
-                    <div class="absolute -left-[17px] md:left-1/2 md:-ml-4 top-1.5 bg-neutral-950 border-2 border-neutral-700 group-hover:border-amber-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
-                        <div class="w-2 h-2 bg-neutral-700 group-hover:bg-amber-500 rounded-full"></div>
-                    </div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:text-right md:ml-auto md:order-2">
-                        <a href="pages/1812-1918.html" class="block p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 hover:bg-neutral-900/60 transition-all duration-300">
-                            <span class="text-xs font-semibold text-neutral-500 group-hover:text-amber-500 uppercase tracking-widest">Regimul Țarist</span>
-                            <h3 class="text-2xl font-bold text-neutral-100 mt-1 mb-3 group-hover:text-amber-400 transition-colors">1812 - 1918</h3>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Secolul de dominație rusă, transformarea în gubernie, politicile de rusificare forțată și apariția mișcărilor de emancipare națională.</p>
-                        </a>
-                    </div>
-                    <div class="w-full md:w-[45%] hidden md:block"></div>
-                </div>
-
-                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between group">
-                    <div class="absolute -left-[17px] md:left-1/2 md:-ml-4 top-1.5 bg-neutral-950 border-2 border-neutral-700 group-hover:border-amber-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
-                        <div class="w-2 h-2 bg-neutral-700 group-hover:bg-amber-500 rounded-full"></div>
-                    </div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:text-right md:ml-auto md:order-1 hidden md:block"></div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:mr-auto md:order-2">
-                        <a href="pages/1918-1939.html" class="block p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 hover:bg-neutral-900/60 transition-all duration-300">
-                            <span class="text-xs font-semibold text-neutral-500 group-hover:text-amber-500 uppercase tracking-widest">Perioada Interbelică</span>
-                            <h3 class="text-2xl font-bold text-neutral-100 mt-1 mb-3 group-hover:text-amber-400 transition-colors">1918 - 1939</h3>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Votul Sfatului Țării din 27 Martie 1918, Unirea cu România, integrarea administrativă, reforma agrară și dezvoltarea socio-culturală din cadrul României Mari.</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between group">
-                    <div class="absolute -left-[17px] md:left-1/2 md:-ml-4 top-1.5 bg-neutral-950 border-2 border-neutral-700 group-hover:border-amber-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
-                        <div class="w-2 h-2 bg-neutral-700 group-hover:bg-amber-500 rounded-full"></div>
-                    </div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:text-right md:ml-auto md:order-2">
-                        <a href="pages/1939-1944.html" class="block p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 hover:bg-neutral-900/60 transition-all duration-300">
-                            <span class="text-xs font-semibold text-neutral-500 group-hover:text-amber-500 uppercase tracking-widest">Al Doilea Război Mondial</span>
-                            <h3 class="text-2xl font-bold text-neutral-100 mt-1 mb-3 group-hover:text-amber-400 transition-colors">1939 - 1944</h3>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Pactul Ribbentrop-Molotov, ultimatumul sovietic din 1940, primul val de deportări, eliberarea din 1941 și reocuparea sovietică din 1944.</p>
-                        </a>
-                    </div>
-                    <div class="w-full md:w-[45%] hidden md:block"></div>
-                </div>
-
-                <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between group">
-                    <div class="absolute -left-[17px] md:left-1/2 md:-ml-4 top-1.5 bg-neutral-950 border-2 border-neutral-700 group-hover:border-amber-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
-                        <div class="w-2 h-2 bg-neutral-700 group-hover:bg-amber-500 rounded-full"></div>
-                    </div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:text-right md:ml-auto md:order-1 hidden md:block"></div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:mr-auto md:order-2">
-                        <a href="pages/1945-1991.html" class="block p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 hover:bg-neutral-900/60 transition-all duration-300">
-                            <span class="text-xs font-semibold text-neutral-500 group-hover:text-amber-500 uppercase tracking-widest">Epoca Sovietică</span>
-                            <h3 class="text-2xl font-bold text-neutral-100 mt-1 mb-3 group-hover:text-amber-400 transition-colors">1945 - 1991</h3>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Instaurarea RSSM, foametea organizată (1946-1947), deportările în masă din 1949 și 1951, urmate de renașterea națională din anii '85-'89.</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relative mb-4 flex flex-col md:flex-row items-start md:justify-between group">
-                    <div class="absolute -left-[17px] md:left-1/2 md:-ml-4 top-1.5 bg-neutral-950 border-2 border-neutral-700 group-hover:border-amber-500 w-8 h-8 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
-                        <div class="w-2 h-2 bg-neutral-700 group-hover:bg-amber-500 rounded-full"></div>
-                    </div>
-                    <div class="w-full md:w-[45%] pl-8 md:pl-0 md:text-right md:ml-auto md:order-2">
-                        <a href="pages/1991-2026.html" class="block p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 hover:bg-neutral-900/60 transition-all duration-300">
-                            <span class="text-xs font-semibold text-neutral-500 group-hover:text-amber-500 uppercase tracking-widest">Independența și Prezentul</span>
-                            <h3 class="text-2xl font-bold text-neutral-100 mt-1 mb-3 group-hover:text-amber-400 transition-colors">1991 - Prezent</h3>
-                            <p class="text-sm text-neutral-400 leading-relaxed">Declarația de Independență (27 august 1991), războiul de pe Nistru, tranziția politică dificilă și parcursul european ferm din anii recenți.</p>
-                        </a>
-                    </div>
-                    <div class="w-full md:w-[45%] hidden md:block"></div>
-                </div>
-
             </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <a href="pages/1918-1939.html" class="card">
+                        <span class="card-tag">Perioada Interbelică</span>
+                        <h3>1918 - 1939</h3>
+                        <p>Votul Sfatului Țării din 27 Martie 1918, Unirea cu România, integrarea administrativă și dezvoltarea socio-culturală din cadrul României Mari.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <a href="pages/1939-1944.html" class="card">
+                        <span class="card-tag">Al Doilea Război Mondial</span>
+                        <h3>1939 - 1944</h3>
+                        <p>Pactul Ribbentrop-Molotov, ultimatumul sovietic din 1940, primul val de deportări, eliberarea din 1941 și reocuparea sovietică din 1944.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <a href="pages/1945-1991.html" class="card">
+                        <span class="card-tag">Epoca Sovietică</span>
+                        <h3>1945 - 1991</h3>
+                        <p>Instaurarea RSSM, foametea organizată (1946-1947), deportările în masă din 1949 și 1951, urmate de renașterea națională de la finele anilor '80.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <a href="pages/1991-2026.html" class="card">
+                        <span class="card-tag">Independența și Prezentul</span>
+                        <h3>1991 - Prezent</h3>
+                        <p>Declarația de Independență (27 august 1991), războiul de pe Nistru, tranziția politică dificilă și parcursul european ferm din ultimii ani.</p>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <footer class="bg-neutral-900 border-t border-neutral-800 py-8 text-center text-sm text-neutral-500">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>&copy; 2026 Proiect Istoric - Basarabia. Toate drepturile rezervate.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Proiect Istoric - Basarabia. Toate drepturile rezervate.</p>
     </footer>
 
-    <script src="scripts/nav.js" defer></script>
-    <script src="scripts/timeline.js" defer></script>
 </body>
 </html>
