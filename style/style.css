@@ -30,7 +30,7 @@ body {
     padding-top: 4rem; /* Spatiu pentru meniul fix */
 }
 
-/* НАВИГАЦИЯ (Meniu) */
+/* НАВИГАЦИЯ (Menu) */
 nav {
     position: fixed;
     top: 0;
@@ -54,7 +54,7 @@ nav {
     justify-content: space-between;
 }
 
-.logo {
+.logo>a {
     font-size: 1.25rem;
     font-weight: 800;
     text-transform: uppercase;

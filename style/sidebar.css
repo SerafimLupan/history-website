@@ -1,0 +1,144 @@
+/* style/sidebar.css */
+
+/* СТРКУТУРА ПАДЖИНИ ШИ ЛЕЙАУТ (Layout Wrapper) */
+.page-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    gap: 2rem;
+}
+
+/* СИДЕБАР КРОНОЛОДЖИК (Sticky Sidebar) */
+.sidebar {
+    width: 280px;
+    position: sticky;
+    top: 6rem; /* Ramane fix sub meniul principal de sus */
+    height: calc(100vh - 8rem);
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.sidebar-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-item {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+    color: #fff;
+    background-color: #1a1a1a;
+}
+
+/* КЛАСА ПЕНТРУ ПАДЖИНА АКТИВА (Active State) */
+.sidebar-link.active {
+    color: #000;
+    background-color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* СТИЛУРИ ПЕНТРУ СУБ-МЕНЮ (Submenu Styles) */
+
+/* Ascundem sub-meniul implicit si pregatim tranzitia */
+.sidebar-item .submenu {
+    list-style: none;
+    padding-left: 1.5rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cand se face hover pe li-ul parinte, afisam sub-meniul */
+.sidebar-item:hover .submenu {
+    max-height: 200px; /* O valoare suficient de mare pentru a cuprinde link-urile */
+    opacity: 1;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Stilurile pentru link-urile din sub-meniu */
+.submenu li a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.submenu li a:hover {
+    color: var(--accent-color);
+}
+
+/* КОНТИНУТ ПРИНЧИПАЛ - АРТИКОЛЕ (Main Content Area) */
+.content-area {
+    flex: 1;
+}
+
+.history-article {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+
+    min-height: calc(100vh - 8rem);
+}
+
+.history-article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.history-article h2 {
+    font-size: 1.75rem;
+    margin: 2rem 0 1rem 0;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 0.5rem;
+}
+
+.history-article p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+}
+
+/* РЕСПОНСИВ ПЕНТРУ МОБИЛ (Responsive Design) */
+@media (max-width: 768px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+}
