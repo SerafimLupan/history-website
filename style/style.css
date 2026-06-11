@@ -1,18 +1,18 @@
-/* ИМПОРТ ТАИЛВИНД v4 (Importul de bază al framework-ului) */
+/* ИМПОРТ ТАИЛВИНД v4 (Importul de baza al framework-ului) */
 @import "tailwindcss";
 
-/* ТЕМЕ ШИ ВАРИАБИЛЕ КУСТОМ (Personalizări direct în CSS) */
+/* ТЕМЕ ШИ ВАРИАБИЛЕ КУСТОМ (Personalizari direct în CSS) */
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* СТИЛУРЬ ДЖЕНЕРАЛЕ ШИ КОРЕКЦУРЬ (Ajustări pentru timeline și efecte) */
+/* СТИЛУРЬ ДЖЕНЕРАЛЕ ШИ КОРЕКЦУРЬ (Ajustari pentru timeline si efecte) */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   
-  /* Stil pentru bara de derulare (scrollbar) adaptată la tema dark */
+  /* Stil pentru bara de derulare (scrollbar) adaptata la tema dark */
   ::-webkit-scrollbar {
     width: 8px;
   }
