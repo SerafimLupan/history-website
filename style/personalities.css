@@ -1,0 +1,183 @@
+/* style/personalities.css */
+
+/* СТИЛУРИ ПЕНТРУ СИДЕБАР НАВИГАТСИЕ (Sidebar Section Navigation) */
+.profile-sidebar-nav {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem; /* Spatiu intre Date Biografice si Navigatie */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile-sidebar-nav h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 0.5rem;
+}
+
+.sidebar-nav-link {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.sidebar-nav-link:hover {
+    color: var(--accent-color);
+    background-color: rgba(245, 158, 11, 0.05);
+    border-left-color: var(--accent-color);
+    padding-left: 1rem; 
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .profile-sidebar-nav {
+        display: none;
+    }
+}
+
+/* СТИЛУРИ СПЕЧИФИЧЕ ПЕНТРУ ПАДЖИНА ПЕРСОНАЛИТАТИ (Profile Layout) */
+.profile-wrapper {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 3rem;
+    min-height: calc(100vh - 12rem);
+}
+
+/* КАРД СТАНГА: ФОТО ШИ ИНФОРАМАЦИЙ РАПИДЕ (Sidebar Info) */
+.profile-aside {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+}
+
+.profile-photo-container {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Pastram proportia portret ceruta */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    background-color: var(--card-bg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    margin-bottom: 1.5rem;
+}
+
+.profile-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.quick-facts {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.quick-facts h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 0.5rem;
+}
+
+.fact-item {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.fact-item strong {
+    color: #fff;
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* ЗОНА ДРЯПТА: БИОГРАФИЕ ШИ КОНТРИБУТИЕ (Main Bio Content) */
+.profile-main h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.profile-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+.bio-section {
+    margin-bottom: 2.5rem;
+}
+
+.bio-section h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+/* Accentul vertical de langa titluri */
+.bio-section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.bio-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d1d5db;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+/* РЕСПОНСИВ ПЕНТРУ МОБИЛ (Responsive Tablet/Mobile) */
+@media (max-width: 768px) {
+    .profile-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+    .profile-aside {
+        position: static;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .profile-main h1 {
+        font-size: 2.2rem;
+    }
+}
