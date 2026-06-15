@@ -65,7 +65,7 @@ html {
 .profile-aside {
     position: sticky;
     top: 6rem;
-    height: fit-content;
+    height: calc(100vh - 4rem); 
 }
 
 .profile-photo-container {
