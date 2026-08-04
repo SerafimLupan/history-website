@@ -6,6 +6,6 @@ Proiectul este despre Basarabia din 1812 - 2026. Aceasta reprezintă evoluția B
 ---
 
 Proiectul folosește următoarele tehnologii:
-    * __HTML__;
-    * __CSS__;
-    * __JavaScript__.
+* __HTML__;
+* __CSS__;
+* __JavaScript__.
