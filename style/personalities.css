@@ -6,7 +6,7 @@
     border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 1.5rem;
-    margin-top: 1.5rem; /* Spatiu intre Date Biografice si Navigatie */
+    margin-top: 1.5rem; 
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
