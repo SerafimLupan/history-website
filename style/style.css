@@ -27,7 +27,7 @@ html {
 
 body {
     antialiased: true;
-    padding-top: 4rem; /* Spatiu pentru meniul fix */
+    padding-top: 4rem; 
 }
 
 /* НАВИГАЦИЯ (Menu) */
@@ -45,7 +45,7 @@ nav {
 }
 
 .nav-container {
-    max-w: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 1.5rem;
     height: 100%;
@@ -111,7 +111,7 @@ header h1 {
 header p {
     font-size: 1.125rem;
     color: var(--text-muted);
-    max-w: 600px;
+    max-width: 600px;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
