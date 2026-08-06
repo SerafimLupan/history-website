@@ -1,150 +1,93 @@
 /* style/personalities.css */
 
-/* СТИЛУРИ ПЕНТРУ СИДЕБАР НАВИГАТСИЕ (Sidebar Section Navigation) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* КОНТЕЙНЕР ПРИНЧИПАЛ КУ 3 КОЛОАНЕ (Станга - Чентру - Дряпта) */
+.profile-wrapper {
+    max-width: 1280px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 220px 1fr 300px; /* Станга: 220px | Чентру: флексибил | Дряпта: 300px */
+    gap: 2.5rem;
+    min-height: calc(100vh - 12rem);
+}
+
+/* 1. КОЛОАНА СТАНГА: СИДЕБАР НАВИГАТСИЕ / КУПРИНС */
+.profile-sidebar-left {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+}
+
 .profile-sidebar-nav {
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 1.5rem; 
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .profile-sidebar-nav h3 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.05em;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 0.5rem;
 }
 
 .sidebar-nav-link {
     color: #d1d5db;
     text-decoration: none;
-    font-size: 0.95rem;
-    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 6px;
     border-left: 2px solid transparent;
     transition: all 0.2s ease;
 }
 
+/* Ефект ла ховер пе линкуриле дин купринс */
 .sidebar-nav-link:hover {
     color: var(--accent-color);
     background-color: rgba(245, 158, 11, 0.05);
     border-left-color: var(--accent-color);
-    padding-left: 1rem; 
+    padding-left: 0.9rem;
 }
 
-
-html {
-    scroll-behavior: smooth;
-}
-
-@media (max-width: 768px) {
-    .profile-sidebar-nav {
-        display: none;
-    }
-}
-
-/* СТИЛУРИ СПЕЧИФИЧЕ ПЕНТРУ ПАДЖИНА ПЕРСОНАЛИТАТИ (Profile Layout) */
-.profile-wrapper {
-    max-width: 1000px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 3rem;
-    min-height: calc(100vh - 12rem);
-}
-
-/* КАРД СТАНГА: ФОТО ШИ ИНФОРАМАЦИЙ РАПИДЕ (Sidebar Info) */
-.profile-aside {
-    position: sticky;
-    top: 6rem;
-    height: calc(100vh - 4rem); 
-}
-
-.profile-photo-container {
-    width: 100%;
-    aspect-ratio: 3 / 4; /* Pastram proportia portret ceruta */
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--card-border);
-    background-color: var(--card-bg);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    margin-bottom: 1.5rem;
-}
-
-.profile-photo-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-}
-
-.quick-facts {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 12px;
-    padding: 1.5rem;
-}
-
-.quick-facts h3 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    padding-bottom: 0.5rem;
-}
-
-.fact-item {
-    margin-bottom: 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.fact-item strong {
-    color: #fff;
-    display: block;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: var(--text-muted);
-}
-
-/* ЗОНА ДРЯПТА: БИОГРАФИЕ ШИ КОНТРИБУТИЕ (Main Bio Content) */
+/* 2. КОЛОАНА МИЖЛОК: КОНЦИНУТ ИСТОРИК ПРИНЧИПАЛ */
 .profile-main h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .profile-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--accent-color);
     margin-bottom: 2.5rem;
     font-weight: 500;
 }
 
 .bio-section {
-    margin-bottom: 2.5rem;
+    padding: 4.5rem;
 }
 
 .bio-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #fff;
     margin-bottom: 1rem;
     position: relative;
-    padding-left: 1rem;
+    padding-left: 0.9rem;
 }
 
-/* Accentul vertical de langa titluri */
+/* Акчентул вертикал дин станга titlului */
 .bio-section h2::before {
     content: "";
     position: absolute;
@@ -164,19 +107,88 @@ html {
     text-align: justify;
 }
 
-/* РЕСПОНСИВ ПЕНТРУ МОБИЛ (Responsive Tablet/Mobile) */
+/* 3. КОЛОАНА ДРЯПТА: ИНФОБОКС (Фотографие портрет ши Дате Рапиде) */
+.profile-sidebar-right {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+}
+
+.infobox {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.profile-photo-container {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Пропортсия портрет 3:4 */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    background-color: #000;
+    margin-bottom: 1.25rem;
+}
+
+.profile-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.quick-facts h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.4rem;
+}
+
+.fact-item {
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.fact-item strong {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.15rem;
+}
+
+/* РЕСПОНСИВ ЛАЙАУТ (Таблете ши Мобиле) */
+@media (max-width: 1024px) {
+    .profile-wrapper {
+        grid-template-columns: 1fr 280px; /* Аскундем навигация дин станга пе таблете */
+    }
+    .profile-sidebar-left {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .profile-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Тречере ла о сингура колоана пе мобил */
         gap: 2rem;
-        margin: 2rem auto;
+        margin: 1.5rem auto;
     }
-    .profile-aside {
+
+    /* Пе мобил ИнфоБокс-ул урка сус, егзакт ка ла Википедия пе телефон */
+    .profile-sidebar-right {
+        order: -1;
         position: static;
+        max-width: 400px;
+        margin: 0 auto 1.5rem auto;
         width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
     }
+
     .profile-main h1 {
         font-size: 2.2rem;
     }
