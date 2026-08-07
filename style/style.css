@@ -1,17 +1,17 @@
 /* style/style.css */
 
-/* VARIABILE CUSTOM SI FONTURI */
+/* ВАРИАБИЕ: КУЛОРИ ШИ ФОНТ */
 :root {
-    --bg-color: #0a0a0a;       /* Gri extrem de inchis pentru fundal */
-    --card-bg: #141414;        /* Gri putin mai deschis pentru carduri */
-    --card-border: #222222;    /* Marginea discreta a cardurilor */
-    --accent-color: #f59e0b;   /* Chihlimbar / Amber pentru elementele active */
-    --text-main: #f3f4f6;      /* Alb mat pentru textul principal */
-    --text-muted: #9ca3af;     /* Gri pentru descrieri */
+    --bg-color: #0a0a0a;       /* Гри екстрем де ынкис пентру фундал */
+    --card-bg: #141414;        /* Гри пуцин май дескис пентру кардури */
+    --card-border: #222222;    /* Маргиня дискретэ а кардурилор */
+    --accent-color: #f59e0b;   /* Chihlimbar / Amber пентру елементе активе */
+    --text-main: #f3f4f6;      /* Алб мат пентру текстул принчипал */
+    --text-muted: #9ca3af;     /*  Гри пентру дескриери */
     --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* STILURI GENERALE (Reset) */
+/* СТИЛУРИЛЕ ГЕНЕРАЛЕ */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body {
     padding-top: 4rem; 
 }
 
-/* НАВИГАЦИЯ (Menu) */
+/* НАВИГАЦИЯ */
 nav {
     position: fixed;
     top: 0;
@@ -75,7 +75,42 @@ nav {
     color: var(--accent-color);
 }
 
-/* ЕКРАН ПРИНЧИПАЛ (Hero) */
+/* СТИЛУРИ ПЕНТРУ БУТОНУЛ ХАМБУРГЕР */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ефект де трансформация ла анимация */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ЕКРАН ПРИНЧИПАЛ */
 header {
     min-height: 100vh;
     display: flex;
@@ -136,7 +171,7 @@ section {
     transform: translateY(-1px);
 }
 
-/* СЕКЦИУНЯ КРОНОЛОДЖИЕ (Timeline) */
+/* СЕКЦИУНЯ КРОНОЛОДЖИЕ  */
 .timeline-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -154,43 +189,12 @@ section {
     position: relative;
 }
 
-/* Linia verticala de fundal (doar pe desktop, peste 768px) */
-@media (min-width: 768px) {
-    .timeline-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 2px;
-        background-color: #1f2937;
-        transform: translateX(-50%);
-    }
-}
-
-/* Un singur rand din timeline */
 .timeline-item {
     position: relative;
     margin-bottom: 3rem;
     width: 100%;
 }
 
-@media (min-width: 768px) {
-    .timeline-item {
-        display: flex;
-        justify-content: space-between;
-    }
-    /* Cardurile impare merg pe stanga, cele pare pe dreapta */
-    .timeline-item:nth-child(odd) .timeline-content {
-        margin-right: auto;
-        text-align: right;
-    }
-    .timeline-item:nth-child(even) .timeline-content {
-        margin-left: auto;
-    }
-}
-
-/* Bulina de pe axa */
 .timeline-dot {
     position: absolute;
     left: -11px;
@@ -209,32 +213,14 @@ section {
     transform: scale(1.1);
 }
 
-/* Prima bulina o lasam aprinsa implicit ca punct de pornire */
 .timeline-item:first-child .timeline-dot {
     border-color: var(--accent-color);
 }
 
-@media (min-width: 768px) {
-    .timeline-dot {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .timeline-item:hover .timeline-dot {
-        transform: translateX(-50%) scale(1.1);
-    }
-}
-
-/* БЛОКУРИЛЕ/КАРДУРИЛЕ (Cards) */
+/* БЛОКУРИЛЕ/КАРДУРИЛЕ */
 .timeline-content {
     width: 100%;
-    padding-left: 2rem; /* Spatiu pentru bulina pe mobil */
-}
-
-@media (min-width: 768px) {
-    .timeline-content {
-        width: 45%;
-        padding-left: 0;
-    }
+    padding-left: 2rem; 
 }
 
 .card {
@@ -284,9 +270,7 @@ section {
     line-height: 1.6;
 }
 
-/* style/style.css */
-
-/* СТИЛУРИ ПЕНТРУ СЕКЦИУНЯ ПЕРСОНАЛИТАЦИ (Personalities Section) */
+/* СТИЛУРИ ПЕНТРУ СЕКЦИУНЯ ПЕРСОНАЛИТАЦИ  */
 .personalities-section {
     max-width: 1100px;
     margin: 0 auto;
@@ -305,12 +289,12 @@ section {
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    overflow: hidden; /* Taie imaginea care iese din margini */
+    overflow: hidden;
     
-    /* Trick CSS pentru format fix: inaltimea e 133.33% din latime (format 3:4) */
+    /*   (format 3:4) */
     display: flex;
     flex-direction: column;
-    aspect-ratio: 3 / 4; /* Format modern portret 3:4, similar cu 4:3 intors */
+    aspect-ratio: 3 / 4; /*             Format portret 3:4 */
     
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
@@ -327,20 +311,20 @@ section {
     height: 70%;
     width: 100%;
     overflow: hidden;
-    background-color: #1a1a1a; /* Background de siguranta */
+    background-color: #1a1a1a;
     border-bottom: 1px solid var(--card-border);
 }
 
 .personality-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Imaginea acopera zona fara a se deforma */
-    object-position: top center; /* Focalizam pe fata, care e sus */
+    object-fit: cover; 
+    object-position: top center;
     transition: transform 0.5s ease;
 }
 
 .personality-card:hover .personality-image img {
-    transform: scale(1.05); /* Zoom fin la hover */
+    transform: scale(1.05);
 }
 
 /* ЗОНА ТЕКСТ: 30% дин иналциме */
@@ -349,8 +333,8 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centram textul pe verticala */
-    align-items: center; /* Centram textul pe orizontala */
+    justify-content: center; 
+    align-items: center; 
     padding: 1rem;
     text-align: center;
 }
@@ -364,18 +348,18 @@ section {
 
 .personality-info p {
     font-size: 0.9rem;
-    color: var(--accent-color); /* Amber pentru familie */
+    color: var(--accent-color); 
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 600;
 }
 
-/* СТИЛУРИ ПЕНТРУ СЕКЦИУНЯ БИБЛИОГРАФИЕ (Bibliography Section) */
+/* СТИЛУРИ ПЕНТРУ СЕКЦИУНЯ БИБЛИОГРАФИЕ  */
 .bibliography-section {
-    min-height: calc(100vh - 4rem); /* Ocupa ecranul complet sub navbar */
+    min-height: calc(100vh - 4rem); 
     max-width: 1000px;
     margin: 0 auto;
-    padding: 6rem 1.5rem 4rem 1.5rem; /* Padding de sus mai mare pt spatiere */
+    padding: 6rem 1.5rem 4rem 1.5rem; 
 }
 
 .bibliography-container {
@@ -405,7 +389,6 @@ section {
     color: #d1d5db;
 }
 
-/* Bulina de chihlimbar dinaintea sursei */
 .bibliography-item::before {
     content: "•";
     position: absolute;
@@ -430,11 +413,61 @@ section {
     color: var(--text-muted);
 }
 
-/* ФУТЕР (Footer) */
+/* ФУТЕР */
 footer {
     border-top: 1px solid var(--card-border);
     padding: 2rem;
     text-align: center;
     font-size: 0.875rem;
     color: #4b5563;
+}
+
+/* РЕСПОНСИВ ПЕНТРУ ЕКРАНЕ МИЧИ */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--card-bg);
+        border-left: 1px solid var(--card-border);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 2rem;
+        gap: 1.5rem;
+        
+        transition: right 0.3s ease-in-out;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(245, 158, 11, 0.1);
+        border-color: rgba(245, 158, 11, 0.2);
+        color: var(--accent-color);
+    }
 }
