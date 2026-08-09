@@ -327,15 +327,6 @@ section {
     line-height: 1.6;
 }
 
-/* АРТИКЛУЛЕ ИСТОРИЧЕ */
-.history-article h3 {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
 /* СТИЛУРИ ПЕНТРУ СЕКЦИУНЯ ПЕРСОНАЛИТАЦИ  */
 .personalities-section {
     max-width: 1100px;

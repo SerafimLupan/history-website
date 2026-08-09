@@ -1,5 +1,17 @@
 /* style/sidebar.css */
 
+/* ВАРИАБИЕ: КУЛОРИ ШИ ФОНТ */
+:root {
+    --bg-color: #0a0a0a;       /* Гри екстрем де ынкис пентру фундал */
+    --card-bg: #141414;        /* Гри пуцин май дескис пентру кардури */
+    --card-border: #222222;    /* Маргиня дискретэ а кардурилор */
+    --accent-color: #f59e0b;   /* Chihlimbar / Amber пентру елементе активе */
+    --text-main: #f3f4f6;      /* Алб мат пентру текстул принчипал */
+    --text-muted: #9ca3af;     /*  Гри пентру дескриери */
+    --text-link: #4292fa;      /* Албастру пентру линкури */
+    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
 /* СТРКУТУРА ПАДЖИНИ ШИ ЛЕЙАУТ */
 .page-wrapper {
     display: flex;
@@ -73,7 +85,7 @@
 }
 
 .sidebar-item:hover .submenu {
-    max-height: 300px; 
+    max-height: 500px; 
     opacity: 1;
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
@@ -119,6 +131,14 @@
     color: var(--accent-color);
     border-bottom: 1px solid var(--card-border);
     padding-bottom: 0.5rem;
+}
+
+.history-article h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .history-article p {
