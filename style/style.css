@@ -38,7 +38,7 @@ a {
 }
 
 [id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 5rem; /* Маргине де скроларе пентру анкоре */  
 }
 
 /* НАВИГАЦИЯ */
