@@ -37,6 +37,10 @@ a {
     text-decoration: none;
 }
 
+[id] {
+    scroll-margin-top: 5rem;
+}
+
 /* НАВИГАЦИЯ */
 nav {
     position: fixed;
