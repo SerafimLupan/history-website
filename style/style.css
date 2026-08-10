@@ -162,9 +162,9 @@ header p {
     margin-bottom: 2rem;
 }
 
-section {
+/* section {
     min-height: 100vh;
-}
+} */
 
 .btn-explore {
     background-color: var(--accent-color);
