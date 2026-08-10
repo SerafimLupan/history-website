@@ -11,7 +11,7 @@
     
     <script src="/scripts/hamburger.js"></script>
 </head>
-<body>
+<div>
 
     <nav>
         <div class="nav-container">
@@ -32,97 +32,152 @@
         </div>
     </nav>
 
-    <aside class="sidebar">
-        <div class="sidebar-title">Etape Istorice</div>
-        <ul class="sidebar-menu">
-            
-            <!-- 1812 -->
-            <li class="sidebar-item">
-                <a href="/pages/cronologie/1812.html" class="sidebar-link active">Anul 1812</a>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-title">Etape Istorice</div>
+            <ul class="sidebar-menu">
+
+                <!-- 1812 -->
+                <li class="sidebar-item">
+                    <a href="/pages/cronologie/1812.html" class="sidebar-link">Anul 1812</a>
+
+                    <!-- submenu level 1-->
+                    <ul class="submenu">
+                        <li><a href="/pages/cronologie/1812.html#cauze">I. Cauzele Anexării</a></li>
+                        <li class="has-nested-submenu">
+                            <a href="/pages/cronologie/1812.html#desfasurarea">II. Desfășurarea</a>
+
+                            <!-- submenu level 2 -->
+                            <ul class="nested-submenu">
+                                <li><a href="/pages/cronologie/1812.html#mai">• Mai</a></li>
+                                <li><a href="/pages/cronologie/1812.html#iunie">• Iunie</a></li>
+                                <li><a href="/pages/cronologie/1812.html#iulie">• Iulie</a></li>
+                                <li><a href="/pages/cronologie/1812.html#august">• August</a></li>
+                                <li><a href="/pages/cronologie/1812.html#octombrie">• Octombrie</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-nested-submenu">
+                            <a href="/pages/cronologie/1812.html#consecintele">III. Consecințele</a>
+
+                            <!-- submenu level 2 -->
+                            <ol class="nested-submenu">
+                                <li><a href="/pages/cronologie/1812.html#cons1">1. Mutilarea teritorială</a></li>
+                                <li><a href="/pages/cronologie/1812.html#cons2">2. Dinamica demografică</a></li>
+                                <li><a href="/pages/cronologie/1812.html#cons3">3. Autonomia temporară</a></li>
+                                <li><a href="/pages/cronologie/1812.html#cons4">4. Biserica în Basarabia</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="/pages/cronologie/1812.html#bibliografie">• Bibliografie</a></li>
+                    </ul>
+                </li>
+
+                <!-- 1812 - 1918 -->
+                <li class="sidebar-item">
+                    <a href="/pages/cronologie/1813-1918.html" class="sidebar-link active">1813 - 1918 (Regimul Tarist)</a>
+
+                    <!-- submenu level 1 -->
+                    <ul class="submenu">
+                        <li class="has-nested-submenu"><a href="/pages/cronologie/1813-1918.html#administratie">I. Instaurarea Administrației Ruse și Pierderea Autonomiei</a></li>
+                        <li><a href="/pages/cronologie/1813-1918.html#rusificare">II. Politica de Rusificare și Biserica</a></li>
+                        <li><a href="/pages/cronologie/1813-1918.html#demografie">III. Transformări Demografice și Sociale</a></li>
+                        <li><a href="/pages/cronologie/1813-1918.html#trezire-nationala">IV. Mișcarea de Trezire Națională</a></li>
+                        <li><a href="/pages/cronologie/1813-1918.html#prabusirea-imperiului-1918">V. Prăbușirea Imperiului și Anul 1918</a></li>
+                        <li><a href="/pages/cronologie/1813-1918.html#bibliografie">• Bibliografie</a></li>
+                    </ul>
+                </li>
+
+                <!-- 1918 - 1939 -->
+                <li class="sidebar-item">
+                    <a href="/pages/cronologie/1918-1939.html" class="sidebar-link">1918 - 1939 (Interbelic)</a>
                 
-                <!-- submenu level 1-->
-                <ul class="submenu">
-                    <li><a href="/pages/cronologie/1812.html#cauze">I. Cauzele Anexării</a></li>
-                    <li class="has-nested-submenu">
-                        <a href="/pages/cronologie/1812.html#desfasurarea">II. Desfășurarea</a>
-                        
-                        <!-- submenu level 2 -->
-                        <ul class="nested-submenu">
-                            <li><a href="/pages/cronologie/1812.html#mai">• Mai</a></li>
-                            <li><a href="/pages/cronologie/1812.html#iunie">• Iunie</a></li>
-                            <li><a href="/pages/cronologie/1812.html#iulie">• Iulie</a></li>
-                            <li><a href="/pages/cronologie/1812.html#august">• August</a></li>
-                            <li><a href="/pages/cronologie/1812.html#octombrie">• Octombrie</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-nested-submenu">
-                        <a href="/pages/cronologie/1812.html#consecintele">III. Consecințele</a>
-                        
-                        <!-- submenu level 2 -->
-                        <ol class="nested-submenu">
-                            <li><a href="/pages/cronologie/1812.html#cons1">1. Mutilarea teritorială</a></li>
-                            <li><a href="/pages/cronologie/1812.html#cons2">2. Dinamica demografică</a></li>
-                            <li><a href="/pages/cronologie/1812.html#cons3">3. Autonomia temporară</a></li>
-                            <li><a href="/pages/cronologie/1812.html#cons4">4. Biserica în Basarabia</a></li>
-                        </ol>
-                    </li>
-                    <li><a href="/pages/cronologie/1812.html#bibliografie">• Bibliografie</a></li>
-                </ul>
-            </li>
+                </li>
 
-            <!-- 1812 - 1918 -->
-            <li class="sidebar-item">
-                <a href="/pages/cronologie/1812-1918.html" class="sidebar-link active">1812 - 1918 (Regimul Tarist)</a>
+                <!-- 1939 - 1944 -->
+                <li class="sidebar-item">
+                    <a href="/pages/cronologie/1939-1944.html" class="sidebar-link">1939 - 1944 (Razboiul)</a>
+                
+                </li>
 
-                <!-- submenu level 1 -->
-                <ul class="submenu">
-                    <li class="has-nested-submenu"><a href="/pages/cronologie/1813-1918.html#administratie">I. Instaurarea Administrației Ruse și Pierderea Autonomiei</a></li>
-                    <li><a href="/pages/cronologie/1813-1918.html#rusificare">II. Politica de Rusificare și Biserica</a></li>
-                    <li><a href="/pages/cronologie/1813-1918.html#demografie">III. Transformări Demografice și Sociale</a></li>
-                    <li><a href="/pages/cronologie/1813-1918.html#trezire-nationala">IV. Mișcarea de Trezire Națională</a></li>
-                    <li><a href="/pages/cronologie/1813-1918.html#prabusirea-imperiului-1918">V. Prăbușirea Imperiului și Anul 1918</a></li>
-                    <li><a href="/pages/cronologie/1813-1918.html#bibliografie">• Bibliografie</a></li>
-                </ul>
-            </li>
-            
-            <!-- 1918 - 1939 -->
-            <li class="sidebar-item">
-                <a href="/pages/cronologie/1918-1939.html" class="sidebar-link">1918 - 1939 (Interbelic)</a>
-            
-            </li>
+                <!-- 1945 - 1991 -->
+                <li class="sidebar-item">
+                    <a href="/pages/cronologie/1945-1991.html" class="sidebar-link">1945 - 1991 (U.R.S.S.)</a>
+                
+                </li>
 
-            <!-- 1939 - 1944 -->
-            <li class="sidebar-item">
-                <a href="/pages/cronologie/1939-1944.html" class="sidebar-link">1939 - 1944 (Razboiul)</a>
-            
-            </li>
-
-            <!-- 1945 - 1991 -->
-            <li class="sidebar-item">
-                <a href="/pages/cronologie/1945-1991.html" class="sidebar-link">1945 - 1991 (U.R.S.S.)</a>
-            
-            </li>
-
-            <!-- 1991 - 2026 -->
-            <li class="sidebar-item">
-                <a href="/pages/cronologie/1991-2026.html" class="sidebar-link">1991 - 2026 (Independenta)</a>
-            
-            </li>
-        </ul>
-    </aside>
+                <!-- 1991 - 2026 -->
+                <li class="sidebar-item">
+                    <a href="/pages/cronologie/1991-2026.html" class="sidebar-link">1991 - 2026 (Independenta)</a>
+                
+                </li>
+            </ul>
+        </aside>
 
         <main class="content-area">
             <article class="history-article">
-                <h1>Anii 1812 - 1918: Regimul Țarist</h1>
-                <p>Anul 1812 reprezinta un punct de cotitura dramatic in istoria spatiului dintre Prut si Nistru. In urma Tratatului de Pace de la Bucuresti, semnat pe 16/28 mai, Imperiul Rus anexeaza jumatatea de est a Principatului Moldovei.</p>
+                <h1>Perioada 1813 – 1918: Regimul Țarist și Drumul spre Unire</h1>
 
-                <h2>Contextul International</h2>
-                <p>Razboiul Ruso-Turc inceput in 1806 a gasit Principatele Romane in calea intereselor expansioniste ale marilor imperii. Dupa negocieri intense si grabite de iminenta invazie a lui Napoleon in Rusia, trimisul tarului, Mihail Kutuzov, forteaza diplomatia otomana sa cedeze acest teritoriu.</p>
+                <p>După smulgerea teritoriului dintre Prut și Nistru din trupul Moldovei în mai 1812, Imperiul Rus a demarat un vast proces de integrare administrativă, asimilare culturală și modificare demografică a noului spațiu anexat, redenumit oficial „Basarabia”. Această etapă de peste un secol este marcată de trecerea de la o autonomie de fațadă la un regim strict de gubernie, dar și de rezistența identitară a populației băștinașe ce va culmina cu Actul Unirii de la 27 Martie 1918.</p>
+            
+                <!-- SECȚIUNEA I -->
+                <h2 id="administratie">I. Instaurarea Administrației Ruse și Pierderea Autonomiei</h2>
 
-                <h2>Tratatul de la Bucuresti</h2>
-                <p>Desi dreptul international al epocii interzicea Portii Otomane sa alieneze teritorii aflate sub suzeranitatea sa (Moldova nefiind provincie turceasca), tratatul este semnat. Din acest moment, termenul de "Basarabia" — utilizat anterior doar pentru sudul regiunii (Bugeac) — este extins de administratia tarista asupra intregului tinut dintre cele doua rauri.</p>
+                <h3>1. Așezământul din 1818</h3>
+                <p>În primii ani de după anexare, administrația țaristă a fost nevoită să acorde populației locale anumite privilegii pentru a preveni răscoalele și pentru a atrage simpatia boierimii moldovenești. Prin <em>Așezământul organizării administrative a Basarabiei</em> (promulgat de țarul Alexandru I în martie 1818), provincia obținea un statut special de autonomie. S-a înființat un Înalt Sfat al guberniei, iar limba română (moldovenească) era recunoscută ca limbă oficială în administrație și justiție, alături de limba rusă.</p>
+            
+                <h3>2. Lichidarea Autonomiei și Statutul de Gubernie (1828)</h3>
+                <p>Odată cu urcarea pe tron a țarului Nicolae I și după înfrângerea Revoluției lui Tudor Vladimirescu (1821), politica Sankt Petersburgului s-a schimbat radical. Prin Regulamentul din 29 februarie 1828, autonomia Basarabiei a fost abolită definitiv. provincia a fost transformată într-o simplă <strong>gubernie rusească</strong> condusă de un guvernator civil subordonat guvernatorului general al Novorosiei. Limba română a fost exclusă treptat din toate instituțiile publice.</p>
+            
+                <!-- SECȚIUNEA II -->
+                <h2 id="rusificare">II. Politica de Rusificare și Biserica</h2>
+
+                <h3>1. Eliminarea Limbii Române din Învățământ</h3>
+                <p>Dacă în 1814 funcționau încă școli bisericești în limba maternă, din a doua jumătate a secolului al XIX-lea s-a aplicat o politică sistematică de deznaționalizare. În 1867 s-a interzis complet predarea în limba română în școlile primare, iar în 1871 limba română a fost interzisă definitiv în toate gimnaziile și liceele din gubernie. Ca urmare, spre sfârșitul secolului al XIX-lea, Basarabia înregistra cea mai mare rată a analfabetismului din întregul Imperiu Rus în rândul populației rurale băștinașe (peste 85%).</p>
+            
+                <h3>2. Rolul Bisericii Ortodoxe</h3>
+                <p>Biserica a reprezentat principalul câmp de bătălie culturală. În primii ani, sub eparhia <strong>Mitropolitului Gavriil Bănulescu-Bodoni</strong> (1812–1821), s-a înființat Seminarul Teologic din Chișinău și s-a tipărit literatură religioasă în limba română. Totuși, după venirea arhiepiscopului <strong>Pavel Lebedev</strong> (1871–1882), rusificarea Bisericii a devenit agresivă: sfintele slujbe în limba română au fost interzise, cărțile românești au fost arse, iar preoții moldoveni care refuzau să slujească în slavonă/rusă au fost înlocuiți sau deportați.</p>
+            
+                <!-- SECȚIUNEA III -->
+                <h2 id="demografie">III. Transformări Demografice și Sociale</h2>
+
+                <h3>1. Politica de Colonizare</h3>
+                <p>Pentru a slăbi ponderea elementului românesc și pentru a securiza granițele imperiului, administrația țaristă a încurajat o masivă colonizare străină. În sudul Basarabiei (Bugeac) și în nord au fost aduși și împroprietăriți cu pământuri fertile coloniști bulgari, găgăuzi, germani, ruși, ucraineni și elvețieni (colonia Șaba). Coloniștii beneficiau de scutire de taxe și de serviciul militar, privilegii refuzate băștinașilor moldoveni.</p>
+            
+                <h3>2. Modificarea Structurii Etnice</h3>
+                <p>Dacă în 1812 românii/moldovenii constituiau peste 86% din populația regiunii, conform primului recensământ general al Imperiului Rus din 1897, ponderea românilor scăzuse la aproximativ 56% la nivelul întregii gubernii (deși în mediul rural rămâneau majoritari cu peste 70%). Orașele au fost complet rusificate și cosmopolitizate, devenind centre administrative coloniale.</p>
+            
+                <!-- SECȚIUNEA IV -->
+                <h2 id="trezire-nationala">IV. Mișcarea de Trezire Națională</h2>
+
+                <h3>1. Generațiile de Intelectuali</h3>
+                <p>În ciuda presiunii de deznaționalizare, conștiința națională a fost menținută de boierimea de sorginte românească și de elitele intelectuale. Personalități precum <strong>Bogdan Petriceicu Hasdeu</strong>, <strong>Constantin Stere</strong>, <strong>Pavel Crușevan</strong> (în planul presei) și preotul poet <strong>Alexei Mateevici</strong> au luptat pentru drepturile culturale ale românilor basarabeni. În 1917, Mateevici scrie celebra poezie <em>„Limba noastră”</em>, devenită simbol național.</p>
+            
+                <h3>2. Presa și Revoluția din 1905</h3>
+                <p>Slăbirea regimului autocratic în urma Revoluției Ruse din 1905 a permis o scurtă perioadă de libertate politică. A apărut primul ziar de limbă română din Chișinău, <em>Basarabia</em> (1906–1907), urmat de gazeta <em>Cuvânt Moldovenesc</em> (1914). Intelectualitatea a început să revendice autonomia politică, redeschiderea școlilor în limba maternă și reforme agrare.</p>
+            
+                <!-- SECȚIUNEA V -->
+                <h2 id="prabusirea-imperiului-1918">V. Prăbușirea Imperiului și Anul 1918</h2>
+
+                <h3>1. De la Autonomie la Independență (1917)</h3>
+                <p>Prăbușirea țarismului în timpul Revoluției din Februarie 1917 a accelerat procesul de emancipare națională. În aprilie 1917 s-a creat <strong>Partidul Național Moldovenesc</strong>, iar în octombrie 1917 s-a constituit <strong>Sfatul Țării</strong> — organul reprezentativ și legislativ al Basarabiei, condus de <strong>Ion Inculeț</strong> (Președinte) și <strong>Pantelimon Halippa</strong> (Vicepreședinte). La 2 decembrie 1917, Sfatul Țării proclamă Republica Democratică Moldovenească ca stat autonom în cadrul Rusiei, iar la 24 ianuarie 1918 proclamă <strong>Independența</strong> totală.</p>
+            
+                <h3>2. Actul Unirii de la 27 Martie 1918</h3>
+                <p>Aflată sub amenințarea bandelor de soldați bolșevizați și a presiunilor teritoriale din partea Ucrainei, conducerea de la Chișinău a solicitat sprijinul armatei române pentru restabilirea ordinii. La <strong>27 martie / 9 aprilie 1918</strong>, Sfatul Țării a votat cu o majoritate covârșitoare (86 voturi pentru, 3 împotrivă și 36 abțineri) <strong>Unirea Republicii Democratice Moldovenești (Basarabia) cu Regatul României</strong>. Acesta a fost primul pas în procesul de formare a Statului Național Unitar Român (Marea Unire din 1918).</p>
+            
+                <!-- SECȚIUNEA RESURSE -->
+                <h2 id="resurse">Surse Istorice și Bibliografie</h2>
+                <div class="resources-block">
+                    <h3>Documente și Lucrări Istorice de Referință</h3>
+                    <ul>
+                        <li><strong>Cazacu, Petre:</strong> <em>Moldova dintre Prut și Nistru (1812–1918)</em>, Tipografia A.S. Terek, Iași, 1924.</li>
+                        <li><strong>Nistor, Ion:</strong> <em>Istoria Basarabiei</em>, Editura Humanitas, București, 1991 (reeditare a ediției din 1923).</li>
+                        <li><strong>Stere, Constantin:</strong> <em>În preajma revoluției</em>, Editura Librăriei Socec & Co., București, 1932.</li>
+                        <li><strong>Boldur, Alexandru:</strong> <em>Istoria Basarabiei. Contribuții la studiul istoriei românilor</em>, Editura Victor Frunză, București, 1992.</li>
+                        <li><strong>Sfatul Țării:</strong> <em>Proclamația către poporul Moldovei și Actul Unirii din 27 Martie 1918</em>, Arhivele Naționale ale Republicii Moldova (ANRM), Fond 727.</li>
+                    </ul>
+                </div>
             </article>
         </main>
+    </div>
 
     <footer>
         <p>&copy; 2026 Proiect Istoric - Basarabia. Toate drepturile rezervate.</p>
