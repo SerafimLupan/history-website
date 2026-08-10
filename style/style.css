@@ -411,65 +411,6 @@ header p {
     font-weight: 600;
 }
 
-/* СТИЛУРИ ПЕНТРУ СЕКЦИУНЯ БИБЛИОГРАФИЕ  */
-.bibliography-section {
-    min-height: calc(100vh - 4rem); 
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 6rem 1.5rem 4rem 1.5rem; 
-}
-
-.bibliography-container {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 2.5rem;
-    border-radius: 12px;
-}
-
-.bibliography-intro {
-    font-size: 1rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.bibliography-list {
-    list-style: none;
-}
-
-.bibliography-item {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #d1d5db;
-}
-
-.bibliography-item::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-weight: bold;
-    font-size: 1.2rem;
-    top: -2px;
-}
-
-.author-name {
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.source-title {
-    font-style: italic;
-    color: var(--accent-color);
-}
-
-.source-details {
-    color: var(--text-muted);
-}
-
 /* ФУТЕР */
 footer {
     border-top: 1px solid var(--card-border);
@@ -529,7 +470,7 @@ footer {
     }
 
     /* Скэдеря пэдингул секциунилор пентру екране мичи */
-    .history-article, .personalities-section, .bibliography-section {
+    .history-article, .personalities-section {
         padding: 2rem 1rem;
     }
     
