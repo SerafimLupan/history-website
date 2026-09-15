@@ -2,17 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    /* СЕЛЕКТАРЯ ЕЛЕМЕНТЕЛОР ДИН ТИМЕЛАЙН */
+    /* selectare element pe timelines */
     const timelineItems = document.querySelectorAll('.timeline-item');
     
-    /* ОПЦИУНИ ПЕНТРУ ИНТЕРСЕЦТИОН ОВСЕРВЕР */
+    /* optiuni pentru intersect observer */
     const observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.2
     };
 
-    /* ЛОДЖИКА ДЕ АНИМАЦИЕ ЛА СКРОЛЛ */
+    /*              logiaca de animatie la scroll         */
     const timelineObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    /* АПЛИКАРЯ СТИЛУРИЛОР ИНИЦИАЛЕ ШИ ПОРНИРЯ ОВСЕРВЕРУЛУЙ */
+    /* Aplicatia style init si pronire observer */
     timelineItems.forEach((item, index) => {
         const content = item.querySelector('.timeline-content');
         const dot = item.querySelector('.timeline-dot');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* ФУНКТИА КАРЕ АКТИВЕАЗА ЕЛЕМЕНТЕЛЕ */
+    /*func care activ element */
     const style = document.createElement('style');
     style.innerHTML = `
         .timeline-item.item-active .timeline-content {
