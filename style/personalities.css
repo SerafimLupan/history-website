@@ -4,18 +4,18 @@ html {
     scroll-behavior: smooth;
 }
 
-/* КОНТЕЙНЕР ПРИНЧИПАЛ КУ 3 КОЛОАНЕ (Станга - Чентру - Дряпта) */
+/* container 3 coloane (Stanga - Centru - Dreapta) */
 .profile-wrapper {
     max-width: 1280px;
     margin: 3rem auto;
     padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: 220px 1fr 300px; /* Станга: 220px | Чентру: флексибил | Дряпта: 300px */
+    grid-template-columns: 220px 1fr 300px; /* Stânga: 220px | Centru: flex | Dreapta: 300px */
     gap: 2.5rem;
     min-height: calc(100vh - 12rem);
 }
 
-/* 1. КОЛОАНА СТАНГА: СИДЕБАР НАВИГАТСИЕ / КУПРИНС */
+/* 1. COloana stânga : sidebar/cuprins */
 .profile-sidebar-left {
     position: sticky;
     top: 6rem;
@@ -52,7 +52,7 @@ html {
     transition: all 0.2s ease;
 }
 
-/* Ефект ла ховер пе линкуриле дин купринс */
+/* Efect hover pentru linkuri */
 .sidebar-nav-link:hover {
     color: var(--accent-color);
     background-color: rgba(245, 158, 11, 0.05);
@@ -60,7 +60,7 @@ html {
     padding-left: 0.9rem;
 }
 
-/* 2. КОЛОАНА МИЖЛОК: КОНЦИНУТ ИСТОРИК ПРИНЧИПАЛ */
+/* 2. coloană mijloc: content istoric principal*/
 .profile-main h1 {
     font-size: 2.75rem;
     font-weight: 800;
@@ -87,7 +87,7 @@ html {
     padding-left: 0.9rem;
 }
 
-/* Акчентул вертикал дин станга titlului */
+/* Accentul vertical din stânga titlului */
 .bio-section h2::before {
     content: "";
     position: absolute;
@@ -107,7 +107,7 @@ html {
     text-align: justify;
 }
 
-/* 3. КОЛОАНА ДРЯПТА: ИНФОБОКС (Фотографие портрет ши Дате Рапиде) */
+/* 3. Colaoană dreaptA : Info box (Fotografii, info scurte generale) */
 .profile-sidebar-right {
     position: sticky;
     top: 6rem;
@@ -124,7 +124,7 @@ html {
 
 .profile-photo-container {
     width: 100%;
-    aspect-ratio: 3 / 4; /* Пропортсия портрет 3:4 */
+    aspect-ratio: 3 / 4;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--card-border);
@@ -163,10 +163,11 @@ html {
     margin-bottom: 0.15rem;
 }
 
-/* РЕСПОНСИВ ЛАЙАУТ (Таблете ши Мобиле) */
+/* REsponsive (Tablete și telefoanes) */
 @media (max-width: 1024px) {
     .profile-wrapper {
-        grid-template-columns: 1fr 280px; /* Аскундем навигация дин станга пе таблете */
+        /* Ascunde navigația din stânga pentru tablete */
+        grid-template-columns: 1fr 280px; 
     }
     .profile-sidebar-left {
         display: none;
@@ -175,12 +176,13 @@ html {
 
 @media (max-width: 768px) {
     .profile-wrapper {
-        grid-template-columns: 1fr; /* Тречере ла о сингура колоана пе мобил */
+        /*  trece la o singură coloană pe telefon */
+        grid-template-columns: 1fr; 
         gap: 2rem;
         margin: 1.5rem auto;
     }
 
-    /* Пе мобил ИнфоБокс-ул урка сус, егзакт ка ла Википедия пе телефон */
+    /* Pe telefon info box-ul se urcă sus  */
     .profile-sidebar-right {
         order: -1;
         position: static;

@@ -1,18 +1,18 @@
 /* style/style.css */
 
-/* ВАРИАБИЛЕ: КУЛОРИ ШИ ФОНТ */
+/* VARIABILE: culori și font */
 :root {
-    --bg-color: #0a0a0a;       /* Гри екстрем де ынкис пентру фундал */
-    --card-bg: #141414;        /* Гри пуцин май дескис пентру кардури */
-    --card-border: #222222;    /* Маргиня дискретэ а кардурилор */
-    --accent-color: #f59e0b;   /* Chihlimbar / Amber пентру елементе активе */
-    --text-main: #f3f4f6;      /* Алб мат пентру текстул принчипал */
-    --text-muted: #9ca3af;     /*  Гри пентру дескриери */
-    --text-link: #4292fa;      /* Албастру пентру линкури */
+    --bg-color: #0a0a0a;      
+    --card-bg: #141414;        
+    --card-border: #222222;   
+    --accent-color: #f59e0b;   
+    --text-main: #f3f4f6;      
+    --text-muted: #9ca3af;     
+    --text-link: #4292fa;      
     --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* СТИЛУРИЛЕ ГЕНЕРАЛЕ */
+/* General */
 * {
     margin: 0;
     padding: 0;
@@ -38,10 +38,10 @@ a {
 }
 
 [id] {
-    scroll-margin-top: 5rem; /* Маргине де скроларе пентру анкоре */  
+    scroll-margin-top: 5rem; /* Margine deasupra când se da scroll-uls */  
 }
 
-/* НАВИГАЦИЯ */
+/* navgatie */
 nav {
     position: fixed;
     top: 0;
@@ -86,7 +86,7 @@ nav {
     color: var(--accent-color);
 }
 
-/* СТИЛУРИ ПЕНТРУ БУТОНУЛ ХАМБУРГЕР */
+/* style pentru hamburger */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -108,7 +108,7 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-/* Ефект де трансформация ла анимация */
+/* Efect de transformare la animație */
 .menu-toggle.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
@@ -121,7 +121,7 @@ nav {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* ЕКРАН ПРИНЧИПАЛ */
+/* Di pi ecranul principal */
 header {
     min-height: 100vh;
     display: flex;
@@ -182,7 +182,7 @@ header p {
     transform: translateY(-1px);
 }
 
-/* СЕКЦИУНЯ КРОНОЛОДЖИЕ  */
+/* Section timelines  */
 .timeline-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -267,7 +267,7 @@ header p {
     }
 }
 
-/* БЛОКУРИЛЕ/КАРДУRILE КРОНОЛОДЖИЕ  */
+/* carduri timeline  */
 .timeline-content {
     width: 100%;
     padding-left: 2rem; 
@@ -327,7 +327,7 @@ header p {
     line-height: 1.6;
 }
 
-/* СТИЛУРИ ПЕНТРУ СЕКЦИУНЯ ПЕРСОНАЛИТАЦИ  */
+/* STyle secțiunea „personalități”  */
 .personalities-section {
     max-width: 1100px;
     margin: 0 auto;
@@ -341,7 +341,7 @@ header p {
     margin-top: 3rem;
 }
 
-/* КАРДУЛ ПЕРСОНАЛИТАТЕ: Формат 4:3 Портрет (w:h) */
+/* === Cardul personalitate: Format 4:3 Portret (w:h)  === */
 .personality-card {
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -351,8 +351,7 @@ header p {
     /*   (format 3:4) */
     display: flex;
     flex-direction: column;
-    aspect-ratio: 3 / 4; /*             Format portret 3:4 */
-    
+    aspect-ratio: 3 / 4;        
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
@@ -363,7 +362,7 @@ header p {
     box-shadow: 0 10px 20px rgba(245, 158, 11, 0.15);
 }
 
-/* ЗОНА ИМАДЖИНЕ: 70% дин иналциме */
+/*  ZONA TEXT: 70% din înălțime*/
 .personality-image {
     height: 70%;
     width: 100%;
@@ -384,7 +383,7 @@ header p {
     transform: scale(1.05);
 }
 
-/* ЗОНА ТЕКСТ: 30% дин иналциме */
+/*    ZONA TEXT: 30% din înălțime   */
 .personality-info {
     height: 30%;
     width: 100%;
@@ -418,7 +417,7 @@ header p {
     padding: 6rem 1.5rem;
 }
 
-/* ФУТЕР */
+/*   <--== FOOTER ==-->   */
 footer {
     border-top: 1px solid var(--card-border);
     padding: 2rem;
@@ -427,7 +426,7 @@ footer {
     color: #4b5563;
 }
 
-/* РЕСПОНСИВ ПЕНТРУ ЕКРАНЕ МИЧИ */
+/* -- Responsivitate pentru ecrane mici/telefon -- */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex; 
@@ -476,7 +475,7 @@ footer {
         color: var(--accent-color);
     }
 
-    /* Скэдеря пэдингул секциунилор пентру екране мичи */
+    /* Scăderea padding-ului secțiunilor pentru ecranele mici/de telefoane */
     .history-article, .personalities-section {
         padding: 2rem 1rem;
     }
